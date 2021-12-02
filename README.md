@@ -1,4 +1,4 @@
-# SI339_Portfolio
+# portfolio-tablet
 
 
-Portfolio in progress!
+Tablet view in progress! 
