@@ -79,6 +79,7 @@ h1 {
     text-align: center;
     font-size: 2em;
     font-weight: bolder;
+
 }
 
 h2 {
@@ -126,8 +127,6 @@ p a {
 
 /* about.html CSS specific */
 
-
-
 .about {
     display: grid;
     grid-template-columns: 1fr;
@@ -149,6 +148,48 @@ p a {
 
 }
 
+
+form {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+label{
+    display: inline-block;
+    margin-right:10px;
+    width:70%;
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+
+button {
+    background-color: white;
+    font-family: "Open Sans";
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+
+}
+
 /* crochet_history.html CSS specific */
 
 
@@ -164,7 +205,6 @@ p a {
     text-align: center;
     padding: 10px;
     margin: 20px 10px;
-
 }
 
 
@@ -324,6 +364,25 @@ p a {
 
 @media screen and (min-width: 1000px){
     
+    /* paralax image */
+
+    h1 {
+        margin: auto;
+        width: 50%;
+        background-color: white;
+    }
+
+
+    #paralax {
+        background-image: url('../images/crochet_stitches.jpeg');
+        background-attachment: fixed; 
+        background-position: center; 
+        background-size: cover; 
+        height: 200px; 
+        background-repeat: no-repeat;
+    }
+
+
     nav {
         width: 50%;
         margin-left: 50%;
@@ -393,11 +452,61 @@ p a {
         grid-column: 4 / span 1;
     }
 
+
+    /* add flipcard */
+
+    .flip-card {
+        background-color: transparent;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+    }
+    
+    .flip-card-back {
+        width: 95%;
+        height: 95%;
+        background-color: white;
+        color: black;
+        transform: rotateY(180deg);
+    }
+
 }
 
 
 @media (prefers-reduced-motion) {
+    
+    /* stop earth animation */
     #earth {
         animation-name: dissolve;
+    }
+
+    /* stops flipcard  */
+    .flip-card:hover .flip-card-inner {
+        transition: none;
+        transform: none;
+
+    }
+
+    /* stops paralax image */
+    #paralax {
+        background-attachment: scroll;
     }
 }
