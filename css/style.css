@@ -49,6 +49,7 @@ li {
     transition: top 1s ease-out;
     background-color: white;
     text-decoration: none;
+    color: black;
 }
 
 .skip a:focus{   
@@ -133,7 +134,6 @@ p a {
     grid-template-rows: repeat(2, auto);
     max-width: 100%;
     padding: 10px;
-    margin-bottom: 30px;
     grid-gap: 20px;
     
 }
@@ -241,6 +241,10 @@ button {
     border: 5px solid #8FBC8F;
 }
 
+.flip-card-back {
+    visibility: hidden;
+}
+
 /* future.html CSS specific */
 .future {
     display: grid;
@@ -255,6 +259,26 @@ button {
 
 
 @media screen and (min-width: 760px){
+
+    /* paralax image */
+
+    h1 {
+        margin: auto;
+        width: 50%;
+        background-color: white;
+    }
+
+
+    #paralax {
+        background-image: url('../images/crochet_stitches.jpeg');
+        background-attachment: fixed; 
+        background-position: center; 
+        background-size: cover; 
+        height: 200px; 
+        background-repeat: no-repeat;
+    }
+
+
 
     /* change header */
 
@@ -332,6 +356,42 @@ button {
         grid-template-rows: repeat(5, auto);
     }
 
+    /* add flipcard */
+
+    .flip-card {
+        background-color: transparent;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+    }
+    
+    .flip-card-back {
+        visibility: visible; 
+        width: 95%;
+        height: 95%;
+        background-color: white;
+        color: black;
+        transform: rotateY(180deg);
+    }
+
     /* future.html CSS specific */
     .future {
         grid-template-columns: 1fr 1fr;
@@ -363,25 +423,6 @@ button {
 }
 
 @media screen and (min-width: 1000px){
-    
-    /* paralax image */
-
-    h1 {
-        margin: auto;
-        width: 50%;
-        background-color: white;
-    }
-
-
-    #paralax {
-        background-image: url('../images/crochet_stitches.jpeg');
-        background-attachment: fixed; 
-        background-position: center; 
-        background-size: cover; 
-        height: 200px; 
-        background-repeat: no-repeat;
-    }
-
 
     nav {
         width: 50%;
@@ -450,42 +491,6 @@ button {
 
     #future_block_4 {
         grid-column: 4 / span 1;
-    }
-
-
-    /* add flipcard */
-
-    .flip-card {
-        background-color: transparent;
-    }
-    
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-    }
-    
-    .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-    }
-    
-    .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden; 
-        backface-visibility: hidden;
-    }
-    
-    .flip-card-back {
-        width: 95%;
-        height: 95%;
-        background-color: white;
-        color: black;
-        transform: rotateY(180deg);
     }
 
 }
