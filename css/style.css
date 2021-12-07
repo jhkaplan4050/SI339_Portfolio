@@ -272,9 +272,15 @@ button {
         background-color: white;
     }
 
+    #h1 {
+        width: 100%;
+    }
+
 
     #paralax {
         background-image: url('../images/crochet_stitches.jpeg');
+        display: flex;
+        align-items: center;
         background-attachment: fixed; 
         background-position: center; 
         background-size: cover; 
