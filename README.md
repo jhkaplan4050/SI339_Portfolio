@@ -1,4 +1,3 @@
-# portfolio-tablet
-
-
-Tablet view in progress! 
+# Julia's Crochet World
+## SI 339 Final Project
+### By Julia Kaplan
