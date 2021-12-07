@@ -1,6 +1,7 @@
 body {
     font-family: "Open Sans";
     background-color: #e4f5dc;
+    line-height: 1.5;
 }
 
 header {
@@ -224,7 +225,9 @@ button {
     grid-gap: 10px;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 30px;
     text-align: center;
+
 }
 
 .indv_projects img {
@@ -254,11 +257,12 @@ button {
     grid-gap: 10px;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 30px;
 } 
 
 
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 600px){
 
     /* paralax image */
 
@@ -422,16 +426,12 @@ button {
 
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 992px){
 
     nav {
         width: 50%;
         margin-left: 50%;
     }
-
-    /* about.html CSS specific */
-
-
     
     /* crochet_history.html CSS specific */
     .container {
